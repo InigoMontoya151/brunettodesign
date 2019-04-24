@@ -1,4 +1,4 @@
-var themename = 'humescores';
+var themename = 'brunetto_design';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
@@ -22,7 +22,7 @@ var gulp = require('gulp'),
 
 
 // CSS via Sass and Autoprefixer
-gulp.task('css', function() {
+gulp.task('css', function () {
 	return gulp.src(scss + '{style.scss,rtl.scss}')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
@@ -58,8 +58,8 @@ gulp.task('javascript', function() {
 gulp.task('watch', function() {
 	browserSync.init({ 
 		open: 'external',
-		proxy: 'humescores.dev',
-		port: 8080
+		proxy: 'brunettodesign',
+		port: 80
 	});
 	gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);
 	gulp.watch(js + '**/*.js', ['javascript']);
